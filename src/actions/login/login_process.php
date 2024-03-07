@@ -8,10 +8,6 @@ spl_autoload_register(function ($class_name) {
 });
 require_once '../../utils.php';
 
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-
-$baseUrl = $protocol . $_SERVER['HTTP_HOST'];
-
 $email = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
 $user = User::findByEmail($email);
@@ -24,20 +20,20 @@ if ($user && password_verify($password, $user['password'])) {
 
         if (isset($_SESSION['user_role'])) {
             if ($_SESSION['user_role'] === 'admin') {
-                header("Location: " . $baseUrl . "/dashboard/admin_dashboard.php");
+                header("Location: /dashboard/admin_dashboard.php");
                 exit();
             } elseif ($_SESSION['user_role'] === 'user') {
-                header("Location: " . $baseUrl . "/dashboard/user_dashboard.php");
+                header("Location: /dashboard/user_dashboard.php");
                 exit();
             }
         }
     } else {
         $_SESSION['error'] = "Your account is pending approval.";
-        header('Location: ' . $baseUrl . '/errors/error.php?type=pending_approval');
-        exit();
+        header('Location: /errors/error.php?type=pending_approval');
+        exit;
     }
 } else {
     $_SESSION['error'] = "Invalid email or password.";
-    header("Location: " . $baseUrl . "/");
-    exit();
+    header("Location: /");
 }
+exit();
