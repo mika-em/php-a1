@@ -5,7 +5,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 class Database
 {
-  private static $dbPath = '/home/data/db.sqlite';
+  private static $dbPath = '/db.sqlite';
   private static $dbInstance = null;
 
   private function __construct()
@@ -17,8 +17,9 @@ class Database
   public static function getConnection()
   {
     if (self::$dbInstance === null) {
+      $fullPath = $_SERVER['DOCUMENT_ROOT'] . self::$dbPath;
       try {
-        self::$dbInstance = new SQLite3(self::$dbPath);
+        self::$dbInstance = new SQLite3($fullPath);
         self::initializeTables();
       } catch (Exception $e) {
         exit("Error connecting to the database: " . $e->getMessage());
