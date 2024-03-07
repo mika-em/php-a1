@@ -1,5 +1,6 @@
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/inc_header.php"); ?>
 <?php include($_SERVER['DOCUMENT_ROOT'] . "/inc_db.php"); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/inc_header.php"); ?>
+
 
 <div class="container vh-100">
   <div class="row h-100 justify-content-center align-items-center">
