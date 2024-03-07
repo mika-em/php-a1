@@ -9,7 +9,7 @@ if (empty($_SESSION['user_role']) || $_SESSION['user_role'] !== 'user') {
 
 ?>
 
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/inc_header.php"); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/src/inc_header.php"); ?>
 <?php include($_SERVER['DOCUMENT_ROOT'] . "/inc_db.php"); ?>
 
 

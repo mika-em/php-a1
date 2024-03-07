@@ -6,7 +6,7 @@ if (empty($_SESSION['user_role']) || $_SESSION['user_role'] !== 'admin') {
   header('Location: /errors/error.php?type=admin_only');
   exit;
 }
-include("../../inc_header.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/src/inc_header.php");
 spl_autoload_register(function ($class_name) {
   require $_SERVER['DOCUMENT_ROOT'] . '/classes/' . $class_name . '.php';
 });
