@@ -30,6 +30,7 @@ if (isset($_GET['id'])) {
 } else {
   echo "<p>No bucket ID provided.</p>";
   echo "<a href='../../actions/admin/manage_buckets.php' class='btn btn-primary'>Go Back</a>";
+  echo "<a href='../../actions/admin/manage_buckets.php' class='btn btn-small btn-primary'>&lt;&lt; BACK</a>";
 }
 
 include("../../inc_footer.php");

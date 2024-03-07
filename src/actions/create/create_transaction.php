@@ -8,6 +8,10 @@ if (empty($_SESSION['user_role']) || $_SESSION['user_role'] !== 'user') {
   exit;
 }
 include("../../inc_header.php");
+
+echo '<a href="/actions/display/display.php" class="btn btn-primary mt-5">Back To Transaction Records</a>';
+echo '<br>';
+echo '<br>';
 ?>
 
 <h1>Create New Transaction</h1>
@@ -33,7 +37,6 @@ include("../../inc_header.php");
 
   <div class="form-group">
     <input type="submit" value="Create" name="submit" class="btn btn-success">
-    <a href="../../actions/display/display.php" class="btn btn-primary">&lt;&lt; BACK</a>
   </div>
 </form>
 

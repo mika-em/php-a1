@@ -30,7 +30,10 @@ $sql .= " GROUP BY buckets.category";
 
 $res = $db->query($sql);
 
-
+echo '<a href="/actions/display/display.php" class="btn btn-primary mt-5">Back To Transaction Records</a>';
+echo '<br>';
+echo '<br>';
+echo '<br>';
 
 ?>
 <div class="w-50 mx-auto">

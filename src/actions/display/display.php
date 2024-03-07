@@ -3,8 +3,8 @@ ob_start();
 if (session_status() !== PHP_SESSION_ACTIVE) {
   session_start();
 }
-if (!isset($_SESSION['user_id'])) {
-  header('location: /');
+if (empty($_SESSION['user_role']) || $_SESSION['user_role'] !== 'user') {
+  header('Location: /errors/error.php?type=user_only');
   exit;
 }
 
@@ -13,6 +13,7 @@ spl_autoload_register(function ($class_name) {
   include $_SERVER['DOCUMENT_ROOT'] . '/classes/' . $class_name . '.php';
 });
 include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_db.php");
+echo '<a href="/dashboard/user_dashboard.php" class="btn btn-primary mt-5">Back To User Dashboard</a>';
 
 Transaction::recategorize();
 

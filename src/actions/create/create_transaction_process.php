@@ -12,8 +12,6 @@ spl_autoload_register(function ($class_name) {
 });
 require_once("../../utils.php");
 
-
-
 if (isset($_POST['submit'])) {
   $date = sanitize_input($_POST['Date']);
   $credit = sanitize_input($_POST['Credit']);
