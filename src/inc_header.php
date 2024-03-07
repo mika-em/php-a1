@@ -18,7 +18,7 @@
     }
 
     if (isset($_SESSION['user_role'])) {
-      $dashboardPath = ($_SESSION['user_role'] == 'admin') ? '/dashboard/admin_dashboard.php' : '/dashboard/user_dashboard.php';
+      $dashboardPath = ($_SESSION['user_role'] == 'admin') ? '/src/dashboard/admin_dashboard.php' : '/src/dashboard/user_dashboard.php';
     } else {
       $dashboardPath = '/';
     }
