@@ -7,7 +7,6 @@ ob_start();
 <div class="container vh-100">
   <div class="row h-100 justify-content-center align-items-center">
     <div class="col-md-6 text-center">
-      <p>Cheryl Lau and Mika Manaligod</p>
       <h1>Welcome!</h1>
       <p class="lead">Get started by logging in or registering a new account.</p>
       <div class="mt-4">
