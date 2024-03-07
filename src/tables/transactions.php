@@ -1,4 +1,5 @@
 <?php
+ob_start();
 function displayTransactions($transactions) {
     if (!empty($transactions)) {
         echo "<table width='100%' class='table table-striped'>";

@@ -1,4 +1,6 @@
-<?php function processRow($row, &$dataPoints)
+<?php
+ob_start();
+ function processRow($row, &$dataPoints)
 {
   echo '<tr>';
   echo '<td>' . htmlspecialchars($row['category']) . '</td>';

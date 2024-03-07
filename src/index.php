@@ -1,4 +1,6 @@
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/inc_db.php"); ?>
+<?php
+ob_start();
+ include($_SERVER['DOCUMENT_ROOT'] . "/inc_db.php"); ?>
 <?php include($_SERVER['DOCUMENT_ROOT'] . "/inc_header.php"); ?>
 
 

@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_header.php");
 
 if (!isset($_SESSION['user_role'])) {
