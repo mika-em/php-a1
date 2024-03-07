@@ -10,7 +10,7 @@ if (empty($_SESSION['user_role']) || $_SESSION['user_role'] !== 'admin') {
 
 include($_SERVER['DOCUMENT_ROOT'] . "/src/inc_header.php");
 spl_autoload_register(function ($class_name) {
-  include $_SERVER['DOCUMENT_ROOT'] . '/classes/' . $class_name . '.php';
+  include $_SERVER['DOCUMENT_ROOT'] . '/src/classes/' . $class_name . '.php';
 });
 require_once("../../utils.php");
 Database::getConnection();

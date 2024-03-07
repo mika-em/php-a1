@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 
 include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_header.php");
 spl_autoload_register(function ($class_name) {
-  include $_SERVER['DOCUMENT_ROOT'] . '/classes/' . $class_name . '.php';
+  include $_SERVER['DOCUMENT_ROOT'] . '/src/classes/' . $class_name . '.php';
 });
 include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_db.php");
 

@@ -69,7 +69,7 @@ class Database
   {
     $exists = self::$dbInstance->querySingle("SELECT COUNT(*) FROM buckets");
     if ($exists == 0) {
-      if (($handle = fopen($_SERVER['DOCUMENT_ROOT'] . "/import/Buckets.csv", "r")) !== FALSE) {
+      if (($handle = fopen($_SERVER['DOCUMENT_ROOT'] . "/src/import/Buckets.csv", "r")) !== FALSE) {
 
         while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
           if (count($data) == 3) {
@@ -108,7 +108,7 @@ class Database
   {
     $exists = self::$dbInstance->querySingle("SELECT COUNT(*) FROM keywords");
     if ($exists == 0) {
-      if (($handle = fopen($_SERVER['DOCUMENT_ROOT'] . "/import/Keywords.csv", "r")) !== FALSE) {
+      if (($handle = fopen($_SERVER['DOCUMENT_ROOT'] . "/src/import/Keywords.csv", "r")) !== FALSE) {
 
         while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
           if (count($data) == 2) {
