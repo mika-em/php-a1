@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
   $success = Bucket::update($bucketId, $category, $description);
 
   if ($success) {
-    header('Location: ../../actions/admin/manage_buckets.php?message=Transaction updated successfully');
+    header('Location: ../../actions/admin/manage_buckets.php?message=Bucket updated successfully');
   } else {
     header('Location: update_bucket.php?id=' . $bucketId . '&error=Unable to update the bucket');
   }

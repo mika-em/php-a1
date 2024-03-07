@@ -44,7 +44,7 @@ $res = $db->query($sql);
   $firstRow = $res->fetchArray();
   if ($firstRow) {
     $year = isset($_GET['year']) ? (int)$_GET['year'] : date('Y'); ?>
-    <h2 class="mt-5 text-center">Yearly Expense Report for <?php echo $year; ?></h2>
+    <h2 class="mt-5 text-center">Annual Transaction Report for <?php echo $year; ?></h2>
     <table class="table table-bordered mt-5 ">
       <thead>
         <tr>

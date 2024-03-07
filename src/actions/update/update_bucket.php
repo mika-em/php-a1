@@ -33,7 +33,7 @@ if (isset($_GET['id'])) {
       </div>
 
       <div class="form-group">
-        <a href="../../actions/display/display.php" class="btn btn-small btn-primary">&lt;&lt; BACK</a>
+        <a href="../../actions/admin/manage_keywords.php" class="btn btn-small btn-primary">&lt;&lt; BACK</a>
         <input type="submit" value="Update" name="submit" class="btn btn-warning">
       </div>
     </form>

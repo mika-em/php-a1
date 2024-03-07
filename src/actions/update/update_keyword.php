@@ -34,7 +34,7 @@ if (isset($_GET['id'])) {
 
       <div class="form-group">
         <input type="submit" value="Update" name="submit" class="btn btn-success">
-        <a href="../../actions/display/display.php" class="btn btn-primary">&lt;&lt; BACK</a>
+        <a href="../../actions/admin/manage_keywords.php" class="btn btn-primary">&lt;&lt; BACK</a>
       </div>
       <?php
       include($_SERVER['DOCUMENT_ROOT'] . "/tables/buckets.php");
@@ -43,10 +43,10 @@ if (isset($_GET['id'])) {
     </form>
 <?php
   } else {
-    echo "<p>Bucket with ID $bucketId not found.</p>";
+    echo "<p>Keyword with ID $bucketId not found.</p>";
   }
 } else {
-  echo "<p>No bucket ID provided.</p>";
+  echo "<p>No keyword ID provided.</p>";
 }
 
 include("../../inc_footer.php");

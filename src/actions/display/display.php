@@ -15,6 +15,13 @@ include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_db.php");
 
 Transaction::recategorize();
 
+if (isset($_GET['message'])) {
+  echo "<p class='success'>{$_GET['message']}</p>";
+}
+if (isset($_GET['error'])) {
+  echo "<p class='error'>{$_GET['error']}</p>";
+}
+
 $transactions = Transaction::fetchAll();
 $otherTransactions = Transaction::fetchUncategorized();
 
