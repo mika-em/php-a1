@@ -27,4 +27,4 @@ foreach ($users as $user) {
 echo "</tbody></table>";
 ?>
 
-<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_footer.php"); ?>
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_footer.php"); ?>

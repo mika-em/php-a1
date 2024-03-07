@@ -20,4 +20,4 @@ if (!isset($_SESSION['user_role'])) {
   <li><a href="/src/actions/display/display.php">View Transactions</a></li>
 </ul>
 
-<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_footer.php"); ?>
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_footer.php"); ?>

@@ -30,4 +30,4 @@ if (!isset($_SESSION['user_role'])) {
   <li><a href="../actions/admin/manage_keywords.php">Manage Keywords for CSV Upload</a></li>
 </ul>
 
-<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_footer.php"); ?>
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_footer.php"); ?>

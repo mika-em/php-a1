@@ -33,4 +33,4 @@ displayBuckets(false);
 
 
 ?>
-<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_footer.php"); ?>
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_footer.php"); ?>

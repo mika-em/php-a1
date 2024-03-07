@@ -58,4 +58,4 @@ include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_header.php");
   </form>
 </div>
 
-<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_footer.php"); ?>
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_footer.php"); ?>
