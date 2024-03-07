@@ -1,6 +1,6 @@
 
 <?php
-
+ob_start();
 require_once 'Database.php';
 class User {
     public static function register($email, $password, $role = 'user', $is_approved = 0) {

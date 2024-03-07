@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 class Bucket
 {
   public static function fetchAll()

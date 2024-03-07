@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 class Keyword
 {
   public static function fetchAll()
