@@ -4,10 +4,10 @@ if (!isset($_SESSION['user_role'])) {
   header("Location: /");
   exit();
 } else if ($_SESSION['user_role'] !== 'admin' && basename($_SERVER['PHP_SELF']) === 'admin_dashboard.php') {
-  header("Location: /");
+  header("Location: /dashboard/user_dashboard.php");
   exit();
 } else if ($_SESSION['user_role'] !== 'user' && basename($_SERVER['PHP_SELF']) === 'user_dashboard.php') {
-  header("Location: /");
+  header("Location: /dashboard/admin_dashboard.php");
   exit();
 }
 ?>
