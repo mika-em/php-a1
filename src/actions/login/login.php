@@ -3,7 +3,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
   session_start();
 }
 
-include($_SERVER['DOCUMENT_ROOT'] . "/src/inc_header.php"); ?>
+include($_SERVER['DOCUMENT_ROOT'] . "/inc_header.php"); ?>
 
 <div class="container">
   <h2>Login</h2>

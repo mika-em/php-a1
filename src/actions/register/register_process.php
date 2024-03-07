@@ -6,7 +6,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 spl_autoload_register(function ($class_name) {
     include $_SERVER['DOCUMENT_ROOT'] . '/classes/' . $class_name . '.php';
 });
-require_once '../../utils.php';
+include($_SERVER['DOCUMENT_ROOT'] . "/utils.php"); 
 
 if (isset($_POST['submit'])) {
     $email = sanitize_input($_POST['email']);
