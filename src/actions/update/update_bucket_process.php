@@ -6,7 +6,7 @@ if (empty($_SESSION['user_role']) || $_SESSION['user_role'] !== 'admin') {
   header('Location: /errors/error.php?type=admin_only');
   exit;
 }
-include($_SERVER['DOCUMENT_ROOT'] . "/src/inc_header.php");
+include("../../inc_header.php");
 require_once("../../classes/Bucket.php");
 require_once("../../classes/Database.php");
 require_once("../../utils.php");

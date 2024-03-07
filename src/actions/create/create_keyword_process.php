@@ -7,9 +7,9 @@ if (empty($_SESSION['user_role']) || $_SESSION['user_role'] !== 'admin') {
   exit;
 }
 
-include($_SERVER['DOCUMENT_ROOT'] . "/src/inc_header.php");
+include("../../inc_header.php");
 spl_autoload_register(function ($class_name) {
-  include $_SERVER['DOCUMENT_ROOT'] . '/src/classes/' . $class_name . '.php';
+  include $_SERVER['DOCUMENT_ROOT'] . '/classes/' . $class_name . '.php';
 });
 require_once("../../utils.php");
 Database::getConnection();
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
   $bucket_id = sanitize_input($_POST['Bucket_Id']);
 
   if (Keyword::create($keyword, $bucket_id)) {
-    header("Location: /src/actions/admin/manage_keywords.php?message=Keyword+Created+Successfully");
+    header("Location: /actions/admin/manage_keywords.php?message=Keyword+Created+Successfully");
   } else {
     header("Location: create_keyword.php?error=Unable+to+create+keyword");
   }

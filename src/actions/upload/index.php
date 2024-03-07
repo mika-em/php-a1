@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id'])) {
   exit;
 }
 spl_autoload_register(function ($class_name) {
-  include $_SERVER['DOCUMENT_ROOT'] . '/src/classes/' . $class_name . '.php';
+  include $_SERVER['DOCUMENT_ROOT'] . '/classes/' . $class_name . '.php';
 });
 
 $allowedFileTypes = ['csv'];
@@ -27,11 +27,11 @@ if (isset($_POST["submit"])) {
   }
 
   if (empty($errorMessages)) {
-    $destination = $_SERVER['DOCUMENT_ROOT'] . '/src/actions/upload/' . $fileName;
+    $destination = $_SERVER['DOCUMENT_ROOT'] . '/actions/upload/' . $fileName;
     if (move_uploaded_file($file, $destination)) {
       $insertedTransactions = Transaction::importFromCSV($destination);
       rename($destination, $destination . '.imported');
-      header('Location: /src/actions/display/display.php');
+      header('Location: /actions/display/display.php');
       exit;
     } else {
       $errorMessages[] = "Sorry, there was an error uploading your file.";
@@ -39,7 +39,7 @@ if (isset($_POST["submit"])) {
   }
 }
 
-include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_header.php");
+include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_header.php");
 ?>
 
 <div class="container mt-4">
@@ -58,4 +58,4 @@ include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_header.php");
   </form>
 </div>
 
-<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_footer.php"); ?>
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_footer.php"); ?>

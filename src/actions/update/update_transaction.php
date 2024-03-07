@@ -6,9 +6,9 @@ if (!isset($_SESSION['user_id'])) {
   header('location: /');
   exit;
 }
-include($_SERVER['DOCUMENT_ROOT'] . "/src/inc_header.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/inc_header.php");
 spl_autoload_register(function ($class_name) {
-  include $_SERVER['DOCUMENT_ROOT'] . '/src/classes/' . $class_name . '.php';
+  include $_SERVER['DOCUMENT_ROOT'] . '/classes/' . $class_name . '.php';
 });
 
 Database::getConnection();
@@ -50,5 +50,5 @@ if (isset($_GET['id'])) {
   echo "<p>No transaction ID provided.</p>";
 }
 
-include($_SERVER['DOCUMENT_ROOT'] . "/src/inc_footer.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/inc_footer.php");
 ?>

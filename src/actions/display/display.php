@@ -7,11 +7,11 @@ if (!isset($_SESSION['user_id'])) {
   exit;
 }
 
-include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_header.php");
+include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_header.php");
 spl_autoload_register(function ($class_name) {
-  include $_SERVER['DOCUMENT_ROOT'] . '/src/classes/' . $class_name . '.php';
+  include $_SERVER['DOCUMENT_ROOT'] . '/classes/' . $class_name . '.php';
 });
-include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_db.php");
+include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_db.php");
 
 Transaction::recategorize();
 
@@ -35,10 +35,10 @@ if ($otherTransactions) {
 }
 
 echo "<h2>Transaction Records</h2>";
-echo "<a href='/src/actions/create/create_transaction.php' class='btn btn-success'>Create New Transaction</a><br/><br/>";
+echo "<a href='/actions/create/create_transaction.php' class='btn btn-success'>Create New Transaction</a><br/><br/>";
 echo '<div class="d-flex">';
-echo '<a href="/src/actions/summary" class="btn btn-info" style="margin-right: 10px;">Summary</a>';
+echo '<a href="/actions/summary" class="btn btn-info" style="margin-right: 10px;">Summary</a>';
 echo '</div>';
 displayTransactions($transactions);
 
-include($_SERVER['DOCUMENT_ROOT'] . "/src/inc_footer.php");
+include_once("../../inc_footer.php");

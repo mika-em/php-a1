@@ -23,7 +23,7 @@ if (isset($_GET['error'])) {
 include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_db.php");
 $keywords = Keyword::fetchAll();
 $dashboardUrl = "../../dashboard/admin_dashboard.php";
-$addKeywordUrl = "/src/actions/create/create_keyword.php";
+$addKeywordUrl = "/actions/create/create_keyword.php";
 echo "<h2>Keyword Records</h2>";
 echo "<div class='d-flex justify-content-start'>";
 echo "<a href='" . htmlspecialchars($dashboardUrl) . "' class='btn btn-primary'>Back To Dashboard</a>";
@@ -49,8 +49,8 @@ if (!empty($keywords)) {
     echo "<td>" . htmlspecialchars($keyword['keyword']) . "</td>";
     echo "<td>" . htmlspecialchars($keyword['category']) . "</td>";
     echo "<td>";
-    echo "<a href='/src/actions/update/update_keyword.php?id=" . htmlspecialchars($keyword['id']) . "' class='btn btn-dark'>Edit</a> ";
-    echo "<a href='/src/actions/delete/delete_keyword.php?id=" . htmlspecialchars($keyword['id']) . "' class='btn btn-danger'>Delete</a>";
+    echo "<a href='/actions/update/update_keyword.php?id=" . htmlspecialchars($keyword['id']) . "' class='btn btn-dark'>Edit</a> ";
+    echo "<a href='/actions/delete/delete_keyword.php?id=" . htmlspecialchars($keyword['id']) . "' class='btn btn-danger'>Delete</a>";
     echo "</td>";
     echo "</tr>";
   }
@@ -61,4 +61,4 @@ if (!empty($keywords)) {
 }
 ?>
 
-<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_footer.php"); ?>
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_footer.php"); ?>

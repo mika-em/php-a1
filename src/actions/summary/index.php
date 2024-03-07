@@ -9,8 +9,8 @@ if (empty($_SESSION['user_role']) || $_SESSION['user_role'] !== 'user') {
 
 ?>
 
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/src/inc_header.php"); ?>
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/src/inc_db.php"); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/inc_header.php"); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/inc_db.php"); ?>
 
 
 <?php
@@ -55,7 +55,7 @@ $res = $db->query($sql);
       <tbody>
         <?php
 
-        include_once($_SERVER['DOCUMENT_ROOT'] . "/src/tables/report.php");
+        include_once($_SERVER['DOCUMENT_ROOT'] . "/tables/report.php");
 
         if ($firstRow) {
           processRow($firstRow, $dataPoints);

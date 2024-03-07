@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id'])) {
   exit;
 }
 spl_autoload_register(function ($class_name) {
-  include $_SERVER['DOCUMENT_ROOT'] . '/src/classes/' . $class_name . '.php';
+  include $_SERVER['DOCUMENT_ROOT'] . '/classes/' . $class_name . '.php';
 });
 require_once("../../utils.php");
 
@@ -30,3 +30,4 @@ if (isset($_POST['submit'])) {
   }
   exit;
 }
+?>

@@ -24,7 +24,7 @@ echo "<h2>Bucket Records</h2>";
 echo "<div class='d-flex justify-content-start'>";
 echo "<a href='../../dashboard/admin_dashboard.php' class='btn btn-primary'>Back To Dashboard</a>";
 echo "<div class='mx-2'>";
-echo "<a href='/src/actions/create/create_bucket.php' class='btn btn-success'>Create New Bucket</a>";
+echo "<a href='/actions/create/create_bucket.php' class='btn btn-success'>Create New Bucket</a>";
 echo "</div>";
 echo "</div>";
 echo "<br/>";
@@ -33,4 +33,4 @@ displayBuckets(false);
 
 
 ?>
-<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_footer.php"); ?>
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_footer.php"); ?>

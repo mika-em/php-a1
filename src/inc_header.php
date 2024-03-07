@@ -18,13 +18,13 @@
     }
 
     if (isset($_SESSION['user_role'])) {
-      $dashboardPath = ($_SESSION['user_role'] == 'admin') ? '/src/dashboard/admin_dashboard.php' : '/src/dashboard/user_dashboard.php';
+      $dashboardPath = ($_SESSION['user_role'] == 'admin') ? '/dashboard/admin_dashboard.php' : '/dashboard/user_dashboard.php';
     } else {
       $dashboardPath = '/';
     }
     ?>
     <a href="<?php echo $dashboardPath; ?>">
-      <img src="/src/banner.png" alt="Banner" width=100% height="200" />
+      <img src="/banner.png" alt="Banner" width=100% height="200" />
     </a>
   </div>
 
