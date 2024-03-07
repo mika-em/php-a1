@@ -5,7 +5,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 class Database
 {
-  private static $dbPath = 'D:/home/data/db.sqlite';
+  private static $dbPath = '/data/db.sqlite';
   private static $dbInstance = null;
 
   private function __construct()
