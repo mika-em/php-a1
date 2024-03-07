@@ -25,8 +25,8 @@ function displayBuckets($readOnly = true)
       echo "<td>" . htmlspecialchars($bucket['description']) . "</td>";
       if (!$readOnly) {
         echo "<td>";
-        echo "<a href='/actions/update/update_bucket.php?id=" . htmlspecialchars($bucket['id']) . "' class='btn btn-dark'>Edit</a> ";
-        echo "<a href='/actions/delete/delete_bucket.php?id=" . htmlspecialchars($bucket['id']) . "' class='btn btn-danger'>Delete</a>";
+        echo "<a href='/src/actions/update/update_bucket.php?id=" . htmlspecialchars($bucket['id']) . "' class='btn btn-dark'>Edit</a> ";
+        echo "<a href='/src/actions/delete/delete_bucket.php?id=" . htmlspecialchars($bucket['id']) . "' class='btn btn-danger'>Delete</a>";
         echo "</td>";
       }
       echo "</tr>";

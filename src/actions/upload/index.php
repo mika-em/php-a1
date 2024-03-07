@@ -27,11 +27,11 @@ if (isset($_POST["submit"])) {
   }
 
   if (empty($errorMessages)) {
-    $destination = $_SERVER['DOCUMENT_ROOT'] . '/actions/upload/' . $fileName;
+    $destination = $_SERVER['DOCUMENT_ROOT'] . '/src/actions/upload/' . $fileName;
     if (move_uploaded_file($file, $destination)) {
       $insertedTransactions = Transaction::importFromCSV($destination);
       rename($destination, $destination . '.imported');
-      header('Location: /actions/display/display.php');
+      header('Location: /src/actions/display/display.php');
       exit;
     } else {
       $errorMessages[] = "Sorry, there was an error uploading your file.";
@@ -39,7 +39,7 @@ if (isset($_POST["submit"])) {
   }
 }
 
-include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_header.php");
+include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_header.php");
 ?>
 
 <div class="container mt-4">

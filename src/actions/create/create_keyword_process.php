@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
   $bucket_id = sanitize_input($_POST['Bucket_Id']);
 
   if (Keyword::create($keyword, $bucket_id)) {
-    header("Location: /actions/admin/manage_keywords.php?message=Keyword+Created+Successfully");
+    header("Location: /src/actions/admin/manage_keywords.php?message=Keyword+Created+Successfully");
   } else {
     header("Location: create_keyword.php?error=Unable+to+create+keyword");
   }

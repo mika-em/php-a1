@@ -1,5 +1,5 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'] . "/inc_header.php");
+include_once($_SERVER['DOCUMENT_ROOT'] . "/src/inc_header.php");
 
 if (!isset($_SESSION['user_role'])) {
   header("Location: /");
